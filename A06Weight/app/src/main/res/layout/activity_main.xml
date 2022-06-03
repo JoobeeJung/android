@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFF0000"
+        android:background="#FFFFFF00"
+        android:textSize="30sp"
+        android:layout_weight="1"
+        android:text="aa" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF00FF00"
+        android:background="#FFFF00FF"
+        android:textSize="30sp"
+        android:layout_weight="1"
+        android:text="bb" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000FF"
+        android:background="#FF00FFFF"
+        android:textSize="30sp"
+        android:layout_weight="1"
+        android:text="cc" />
+
+</LinearLayout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="horizontal"
+tools:context=".MainActivity">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#FFFF0000"
+    android:background="#FFFFFF00"
+    android:textSize="30sp"
+    android:layout_weight="1"
+    android:text="aa" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#FF00FF00"
+    android:background="#FFFF00FF"
+    android:textSize="30sp"
+    android:layout_weight="1"
+    android:text="bb" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#FF0000FF"
+    android:background="#FF00FFFF"
+    android:textSize="30sp"
+    android:layout_weight="1"
+    android:text="cc" />
+
+</LinearLayout>
+
