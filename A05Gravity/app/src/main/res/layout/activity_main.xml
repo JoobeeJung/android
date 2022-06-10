@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,13 +7,14 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:text="Button"
         android:layout_gravity="left"
-        android:text="Button" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button2"
@@ -27,6 +28,7 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:layout_gravity="right"
         android:text="Button" />
 
@@ -36,7 +38,7 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:gravity="right"
-        android:textColor="#FFFF0000"
+        android:textColor="#ffff0000"
         android:text="Red Right 30sp" />
 
     <TextView
@@ -57,10 +59,11 @@
         android:textColor="#FF0000FF"
         android:text="Blue Right 34sp" />
 
-<!--
-        wrap_content 같은 경우 : 여유공간이 없을 때는
-        gravity는 의미가 없다.
--->
+    <!--
+        wrap_content 같은 경우 : 여유공간없을때
+        gravity는 의미 없다.
+    -->
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -69,4 +72,6 @@
         android:gravity="center_vertical"
         android:textColor="#FF0000FF"
         android:text="Blue Right 34sp" />
-</LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,18 +1,19 @@
 package com.kbstar.a04linear;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.LinearLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//        LinearLayout => Button
+        // setContentView(R.layout.activity_main);
+        // LinearLayout => Button
+
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         );
 
         Button button = new Button(this);
-        button.setText("Button By Code");
+        button.setText("Button by Code");
 
         button.setLayoutParams(param);
         layout.addView(button);

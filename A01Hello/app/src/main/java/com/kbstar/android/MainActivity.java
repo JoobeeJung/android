@@ -7,18 +7,25 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView textview;
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); //R = resource 폴더 의미
+
+
+        setContentView(R.layout.activity_main);
 
         /*
         JS
-        bar btn = document.getElementById("btn")
+        var btn = document.getElementById('btn');
+        let btn = document.querySelector('#btn');
+        let btn2 = $("#btn")
          */
-        textview = findViewById(R.id.textView);
-        System.out.println("========="+textview.getText().toString());
+
+        textView = findViewById(R.id.textView);
+        System.out.println("-------------------- " + textView.getText().toString() );
+
+
     }
 }
