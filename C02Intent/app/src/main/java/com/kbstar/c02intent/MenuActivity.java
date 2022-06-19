@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
-    Button button;
 
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,9 +21,9 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.putExtra("name","홍길동");
-                intent.putExtra("company","국민은행");
-                setResult(1004,intent);
+                intent.putExtra("name", "홍길동");
+                intent.putExtra("company", "국민은행");
+                setResult(1004, intent);
 
                 finish();
             }

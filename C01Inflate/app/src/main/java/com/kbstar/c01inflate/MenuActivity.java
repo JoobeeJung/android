@@ -21,20 +21,22 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        //버튼, 컨테이너 객체 찾아오기
+        // 버튼, 컨테이너 객체 찾아오기
         button = findViewById(R.id.button);
+        System.out.println("++++++++++++++++++++++++++++++ button : " + button.getText().toString());
+
         container = findViewById(R.id.container);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                LayoutInflater inflater = ( LayoutInflater )getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 inflater.inflate(R.layout.sub1, container, true);
                 CheckBox checkBox = container.findViewById(R.id.checkBox);
                 checkBox.setTag("Sub1 로딩 완료");
 
                 button = container.findViewById(R.id.button2);
-                System.out.println("=================== button2 : "+button.getText().toString());
+                System.out.println("======================= button2 : " + button.getText().toString());
             }
         });
     }

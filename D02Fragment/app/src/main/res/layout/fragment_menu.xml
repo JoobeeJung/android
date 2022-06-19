@@ -13,10 +13,10 @@
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/btnKb"
+        android:id="@+id/btnMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GoTo KB"
+        android:text="GoTo MAIN"
         android:textSize="24sp"/>
 
 

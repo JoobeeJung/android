@@ -3,6 +3,5 @@
 
     <item android:state_pressed="true"
         android:drawable="@drawable/finger_pressed"/>
-    <item android:drawable="@drawable/finger"/>
-
+    <item android:drawable="@drawable/finger" />
 </selector>

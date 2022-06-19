@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private ImageView imageView2;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         imageView2 = findViewById(R.id.imageView2);
     }
 
-    public void onButtonClicked(View v){
-        System.out.println("------------------- Clicked!");
+    public void onButtonClicked(View v) {
+        System.out.println("----------------------------------- Clicked");
 
         if(imageIndex == 1)
         {
@@ -37,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             imageView2.setVisibility(View.INVISIBLE);
             imageIndex = 1;
         }
-        System.out.println(imageIndex);
     }
+
+
 }

@@ -2,8 +2,13 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
     <size android:height="120dp" android:width="120dp"/>
-    <stroke android:width="5dp" android:color="#FF0000FF"></stroke>
+    <stroke android:width="5dp" android:color="#ff0000ff" />
     <solid android:color="#FF0000"></solid>
     <padding android:bottom="3dp"/>
-
 </shape>
+
+<!--
+    .line {
+        border color:#FFFFFF solid ...
+    }
+-->

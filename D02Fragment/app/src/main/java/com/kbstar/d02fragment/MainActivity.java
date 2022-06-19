@@ -8,7 +8,6 @@ public class MainActivity extends AppCompatActivity {
 
     MainFragment mainFragment;
     MenuFragment menuFragment;
-    KbFragment kbFragment;
 
 
     @Override
@@ -18,19 +17,12 @@ public class MainActivity extends AppCompatActivity {
 
         mainFragment = new MainFragment();
         menuFragment = new MenuFragment();
-        kbFragment = new KbFragment();
+
     }
 
 
     public void changeFragment(int idx)
     {
-        if(idx == 2)
-        {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.container, kbFragment)
-                    .commit();
-        }
         if(idx == 1)
         {
             getSupportFragmentManager()

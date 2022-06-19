@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
+
     Button btnBack;
 
     @Override
@@ -22,5 +23,6 @@ public class MenuActivity extends AppCompatActivity {
                 finish();
             }
         });
+
     }
 }
