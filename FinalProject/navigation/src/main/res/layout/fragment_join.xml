@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JoinFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="450dp"
+        android:layout_height="820dp"
+        android:paddingTop="300dp"
+        android:paddingLeft="100dp"
+        android:text="회원가입"
+        android:textColor="#0000FF"
+        android:textSize="50sp" />
+
+</FrameLayout>

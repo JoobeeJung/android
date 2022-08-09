@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/a"
+    app:startDestination="@id/mapsFragment">
+
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.kbstar.navigation.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.kbstar.navigation.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_joinFragment"
+            app:destination="@id/joinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.kbstar.navigation.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_itemFragment22"
+            app:destination="@id/itemFragment22" />
+        <action
+            android:id="@+id/action_mainFragment_to_itemFragment4"
+            app:destination="@id/itemFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_itemFragment32"
+            app:destination="@id/itemFragment32" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.kbstar.navigation.ItemFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_itemFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment22"
+        android:name="com.kbstar.navigation.ItemFragment2"
+        android:label="fragment_item_list2"
+        tools:layout="@layout/fragment_item_list2" />
+    <fragment
+        android:id="@+id/itemFragment32"
+        android:name="com.kbstar.navigation.ItemFragment3"
+        android:label="fragment_item_list3"
+        tools:layout="@layout/fragment_item_list3" >
+        <action
+            android:id="@+id/action_itemFragment32_to_cancelFragment"
+            app:destination="@id/cancelFragment" />
+        <action
+            android:id="@+id/action_itemFragment32_to_reivewFragment"
+            app:destination="@id/reivewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinFragment"
+        android:name="com.kbstar.navigation.JoinFragment"
+        android:label="fragment_join"
+        tools:layout="@layout/fragment_join" >
+        <action
+            android:id="@+id/action_joinFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="com.kbstar.navigation.bookFragment"
+        android:label="fragment_book"
+        tools:layout="@layout/fragment_book" >
+        <action
+            android:id="@+id/action_bookFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cancelFragment"
+        android:name="com.kbstar.navigation.CancelFragment"
+        android:label="fragment_cancel"
+        tools:layout="@layout/fragment_cancel" />
+    <fragment
+        android:id="@+id/reivewFragment"
+        android:name="com.kbstar.navigation.ReivewFragment"
+        android:label="fragment_reivew"
+        tools:layout="@layout/fragment_reivew" />
+</navigation>
