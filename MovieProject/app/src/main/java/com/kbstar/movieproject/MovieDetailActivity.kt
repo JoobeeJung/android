@@ -40,6 +40,8 @@ class MovieDetailActivity : AppCompatActivity() {
         {
             Log.d("jbjung from", "not null !!!")
             binding.btnBooking.visibility = View.VISIBLE
+
+
         }else
         {
             Log.d("jbjung from", "null !!!")
@@ -67,6 +69,12 @@ class MovieDetailActivity : AppCompatActivity() {
                 binding.itemCountriesTextView.text = it.countries
                 binding.itemGenresTextView.text = it.genres
                 binding.itemKeywordsTextView.text = it.keywords
+
+                SystemClock.sleep(200)
+
+                binding.parentShimmerLayout.visibility = View.GONE
+                binding.parentShimmerLayout.stopShimmer()
+                binding.detailMainContent.visibility = View.VISIBLE
             } ?: let {
                 Toast.makeText(this, "영화 상세 가져오기를 실패했습니다.", Toast.LENGTH_SHORT).show()
             }

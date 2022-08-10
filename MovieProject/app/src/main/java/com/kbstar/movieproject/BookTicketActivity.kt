@@ -96,11 +96,6 @@ class BookTicketActivity : AppCompatActivity() {
                         Log.d("jbjung booking =====> ",result.toString())
                         //성공시 마이페이지로 전환
                         finish()
-//
-//                        val intent = Intent(applicationContext, MyPageActivity::class.java)
-//                        intent.putExtra("user_id", "${loginId}")
-//                        startActivity(intent)
-
                     }
 
                     override fun onFailure(

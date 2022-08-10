@@ -9,7 +9,7 @@ class MovieDetailRepository(val application: MyApplication) {
     fun getMovieDetail(id: String?, callback: retrofit2.Callback<Movie>){
         Log.d("jbjung","getMovieDetail")
 //        var resultData = Movie
-        val apiKey = "k_1bwxl3vd" //k_t7zmd184
+        val apiKey = "k_t7zmd184"//"k_1bwxl3vd"
         val url = "https://imdb-api.com/en/API/Title/$apiKey/$id"
 
         //영화 detail api 서버에서

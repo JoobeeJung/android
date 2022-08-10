@@ -64,29 +64,6 @@ class MyPageActivity : AppCompatActivity() {
         super.onStart()
         viewModel.getServerData(loginId)
     }
-//
-//    fun getServerData() {
-//        Log.d("kkang","8888888888")
-//        //목록 데이터 서버에서
-//        val bookingService = (applicationContext as MyApplication).bookingService
-//        val call = bookingService.getBooking(loginId)
-//        call.enqueue(object: retrofit2.Callback<MutableList<Booking>>{
-//            override fun onResponse(
-//                call: Call<MutableList<Booking>>,
-//                response: Response<MutableList<Booking>>
-//            ) {
-//                bookingList.clear()
-//                bookingList.addAll(response.body() ?: mutableListOf()) //없으면 빈것
-//                adapter.notifyDataSetChanged()//갱신
-//            }
-//
-//            override fun onFailure(call: Call<MutableList<Booking>>, t: Throwable) {
-//                t.printStackTrace()
-//                call.cancel()
-//
-//            }
-//        })
-//    }
 
     override fun onBackPressed() {
 //        super.onBackPressed()

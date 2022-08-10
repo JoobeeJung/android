@@ -66,11 +66,21 @@ class MainActivity : AppCompatActivity() {
                 viewModel.movieSearchedLiveData.observe(this@MainActivity){
                     it?.let {
 
-                        boxOfficeList.clear()
-                        it.results.forEach {
-                            val boxOffice = BoxOffice(movie_IMDbId = it.id, movie_name = it.title, movie_thumbnail = it.image, movie_idx = null, movie_rank = null, movie_status = null)
-                            boxOfficeList.add(boxOffice)
+                        if(it.results.size == 0)
+                        {
+                            boxOfficeList.clear()
+                            Toast.makeText(this@MainActivity, "검색어에 해당하는 영화가 없습니다.", Toast.LENGTH_SHORT).show()
+
+                        }else
+                        {
+                            boxOfficeList.clear()
+                            it.results.forEach {
+                                val boxOffice = BoxOffice(movie_IMDbId = it.id, movie_name = it.title, movie_thumbnail = it.image, movie_idx = null, movie_rank = null, movie_status = null)
+                                boxOfficeList.add(boxOffice)
+                            }
                         }
+
+
                         binding.loadingImageView.visibility = View.INVISIBLE
                         binding.mainRecyclerView.visibility = View.VISIBLE
 
@@ -79,39 +89,10 @@ class MainActivity : AppCompatActivity() {
                         Log.d("jbjung searchMovie", boxOfficeList.toString())
 
                     } ?: let{
-                        Toast.makeText(this@MainActivity, "영화 검색을 실패했습니다.", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@MainActivity, "영화 검색을 실패했습니다.", Toast.LENGTH_SHORT).show()
                     }
                 }
-//                Log.d("jbjung::search",query!!)
-//                val movieSearchService = (applicationContext as MyApplication).movieService
-//                val apiKey = "k_1bwxl3vd" //k_t7zmd184
-//                val call = movieSearchService.searchMovie("https://imdb-api.com/en/API/Search/$apiKey/$query")
-////
-//                call.enqueue(object : retrofit2.Callback<MovieResult> {
-//                    override fun onResponse(
-//                        call: Call<MovieResult>,
-//                        response: Response<MovieResult>
-//                    ) {
-//                        val movie_searched = response.body()!!
-//                        Log.d("jbjung::Search_API", "${movie_searched.results}")
-//
-//                        boxOfficeList.clear()
-//                        movie_searched.results.forEach {
-//                            val boxOffice = BoxOffice(movie_IMDbId = it.id, movie_name = it.title, movie_thumbnail = it.image, movie_idx = null, movie_rank = null, movie_status = null)
-//                            boxOfficeList.add(boxOffice)
-//                        }
-//                        binding.loadingImageView.visibility = View.INVISIBLE
-//                        binding.mainRecyclerView.visibility = View.VISIBLE
-//
-//                        adapter.notifyDataSetChanged()
-//
-//                    }
-//
-//                    override fun onFailure(call: Call<MovieResult>, t: Throwable) {
-//                        t.printStackTrace()
-//                        call.cancel()
-//                    }
-//                })
+
                 return true
             }
 
@@ -133,7 +114,6 @@ class MainActivity : AppCompatActivity() {
         //유저가 손으로 끌어서 열거나 닫거나.. toggle 로 열거나 닫거나..
         //둘이 상호 연동..
         toggle.syncState()
-
 
         binding.mainRecyclerView.layoutManager = GridLayoutManager(this, 2)
         binding.mainRecyclerView.adapter = adapter

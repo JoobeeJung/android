@@ -19,7 +19,7 @@ class MainRepository(val application: MyApplication) {
         Log.d("jbjung","getSearchResult")
         //영화 검색 목록 api 호출
 
-        val apiKey = "k_1bwxl3vd" //k_t7zmd184
+        val apiKey = "k_t7zmd184"//"k_1bwxl3vd" //k_t7zmd184
         val url = "https://imdb-api.com/en/API/Search/$apiKey/$keyword"
 
         val movieSearchService =application.movieSearchService
